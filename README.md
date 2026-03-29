@@ -12,15 +12,38 @@ A busy pet owner needs help staying consistent with pet care. They want an assis
 
 Your job is to design the system first (UML), then implement the logic in Python, then connect it to the Streamlit UI.
 
-## What you will build
+## Features
 
-Your final app should:
+### Smarter Scheduling
+The PawPal+ system includes several advanced algorithmic features:
+- **Priority-Based Scheduling**: Automatically prioritizes essential care tasks (like medication) to fit within your available time.
+- **Time Sorting**: Organizes your daily plan chronologically for easier tracking.
+- **Conflict Detection**: Alerts you if multiple tasks for the same pet are scheduled at the same time.
+- **Recurring Tasks**: Automatically re-schedules daily tasks once they are marked as complete.
+- **Filtering**: Easily filter tasks by pet name or completion status to focus on what matters.
 
-- Let a user enter basic owner + pet info
-- Let a user add/edit tasks (duration + priority at minimum)
-- Generate a daily schedule/plan based on constraints and priorities
-- Display the plan clearly (and ideally explain the reasoning)
-- Include tests for the most important scheduling behaviors
+## 📸 Demo
+
+<a href="#"><img src='https://via.placeholder.com/800x400?text=PawPal+App+Screenshot' title='PawPal App' width='' alt='PawPal App' class='center-block' /></a>
+
+## Testing PawPal+
+
+To ensure the reliability of the scheduling logic, PawPal+ includes an automated test suite.
+
+### Running Tests
+```bash
+python3 -m pytest tests/test_pawpal.py
+```
+
+### Coverage
+The tests verify:
+- **Task Recurrence**: Daily tasks correctly generate new instances upon completion.
+- **Sorting Accuracy**: Tasks are correctly ordered by time.
+- **Conflict Logic**: Scheduler correctly identifies overlapping tasks for the same pet.
+- **Priority Logic**: High-priority tasks are correctly scheduled first.
+- **Time Constraints**: The scheduler strictly respects the user's available time.
+
+**Confidence Level**: ⭐⭐⭐⭐⭐ (5/5) - Core scheduling and data integrity are fully verified by automated tests.
 
 ## Getting started
 
